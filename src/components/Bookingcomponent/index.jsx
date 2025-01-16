@@ -166,7 +166,7 @@ const bookings = () => {
 
           {/* Search Button */}
         </Card>
-        <Button className="w-44 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-3xl md:top-[60%] top-[94%] absolute font-bold text-2xl">
+        <Button className="w-44 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-3xl md:top-[60%] top-[84%] absolute font-bold text-2xl">
           SEARCH
         </Button>
       </div>
