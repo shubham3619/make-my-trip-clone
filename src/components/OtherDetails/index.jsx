@@ -51,9 +51,9 @@ const OtherDetails = () => {
             </div>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col md:flex-row gap-4 w-full items-center space-x-4">
             <div className="flex-1 md:flex-none">
-              <div className="flex items-center border rounded-md p-2">
+              <div className="flex items-center border w-full rounded-md p-2">
                 <span className="text-gray-600">🇮🇳 +91</span>
                 <input
                   type="text"
@@ -62,7 +62,7 @@ const OtherDetails = () => {
                 />
               </div>
             </div>
-            <Button className="bg-blue-500 text-white">GET APP LINK</Button>
+            <Button className="bg-blue-500 text-white w-full">GET APP LINK</Button>
           </div>
         </div>
       </Card>

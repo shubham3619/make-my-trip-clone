@@ -33,7 +33,7 @@ const FareOption = ({ label, sublabel, active = false }) => (
           <Label htmlFor={label} className="font-medium">
             {label}
           </Label>
-          <p className="text-xs text-gray-500">{sublabel}</p>
+          <p className="text-xs text-gray-500 hidden md:block">{sublabel}</p>
         </div>
       </div>
     </RadioGroup>
@@ -43,7 +43,7 @@ const FareOption = ({ label, sublabel, active = false }) => (
 const bookings = () => {
   return (
     <div className="flex justify-center flex-col">
-      <div className="bg-white  absolute top-20 flex justify-center self-center rounded-lg shadow-lg p-4 z-10">
+      <div className="bg-white hidden md:absolute top-20 md:flex justify-center self-center rounded-lg shadow-lg p-4 z-10">
         <ul className="flex justify-center items-center gap-6">
           <li className="flex flex-col items-center gap-2 text-center w-[90px]">
             <Plane />
@@ -85,7 +85,7 @@ const bookings = () => {
       </div>
 
       <div className="w-full flex justify-center">
-        <Card className="p-4 w-full mt-10   mx-auto pt-16  flex flex-col bg-white">
+        <Card className="p-4 w-full md:mt-10   mx-auto md:pt-16 pt-6 flex flex-col bg-white">
           {/* Trip Type Selection */}
 
           <div className="mb-6">
@@ -106,7 +106,7 @@ const bookings = () => {
           </div>
 
           {/* Search Fields */}
-          <div className="grid grid-cols-5 mb-6 border border-gray-200 rounded-lg overflow-hidden">
+          <div className="grid md:grid-cols-5 grid-cols-2 mb-6 border border-gray-200 rounded-lg overflow-hidden">
             <div className="col-span-1 p-4 border-r border-gray-200">
               <Label className="text-sm text-gray-500">From</Label>
               <div className="text-xl font-bold">Delhi</div>
@@ -143,7 +143,7 @@ const bookings = () => {
             </div>
           </div>
           {/* Fare Types */}
-          <div className="mb-6 flex gap-2">
+          <div className="mb-6 md:flex gap-2">
             <div>
               <div className="text-sm font-medium mb-2">
                 Select a special fare
@@ -152,7 +152,7 @@ const bookings = () => {
                 EXTRA SAVINGS
               </div>
             </div>
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid md:grid-cols-5 grid-cols-2 gap-4">
               <FareOption label="Regular" sublabel="Regular fares" active />
               <FareOption label="Student" sublabel="Extra discounts/baggage" />
               <FareOption label="Senior Citizen" sublabel="Up to ₹ 600 off" />
@@ -166,14 +166,14 @@ const bookings = () => {
 
           {/* Search Button */}
         </Card>
-        <Button className="w-44 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-3xl top-[60%] absolute font-bold text-2xl">
+        <Button className="w-44 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-3xl md:top-[60%] top-[94%] absolute font-bold text-2xl">
           SEARCH
         </Button>
       </div>
 
 
-      <div className="w-full bg-white mt-8 rounded-full shadow-lg border-gray-200">
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-2 px-4">
+      <div className="w-full bg-white mt-8 md:rounded-full shadow-lg border-gray-200">
+      <div className="max-w-7xl mx-auto md:flex grid grid-cols-1 gap-7 justify-between items-center py-2 px-4">
         <div className="flex items-center gap-2 px-3 cursor-pointer hover:bg-gray-50  py-1 border-r border-gray-300">
           <span className="text-blue-600">
             <Globe className="w-4 h-4" />

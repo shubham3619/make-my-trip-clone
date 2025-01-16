@@ -523,7 +523,7 @@ const footerSections = [
       {/* Social Footer */}
       <div className="bg-black text-white py-6">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center">
+          <div className="flex md:flex-row flex-col gap-5 justify-between items-center">
             <div className="flex space-x-6">
               {/* Social Media Icons */}
               <a href="#" className="hover:opacity-80">
@@ -550,7 +550,7 @@ const footerSections = [
             </div>
             <div className="text-sm">
               <p>© 2025 MAKEMYTRIP PVT. LTD.</p>
-              <p className="text-right">
+              <p className="md:text-right">
                 Country <span className="font-medium">India USA UAE</span>
               </p>
             </div>
