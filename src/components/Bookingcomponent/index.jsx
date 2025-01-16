@@ -3,11 +3,15 @@ import {
   BriefcaseMedical,
   Bus,
   Car,
+  Gift,
+  Globe,
   Hotel,
   House,
   Plane,
+  Shield,
   Train,
   Umbrella,
+  Users,
 } from "lucide-react";
 import React from "react";
 //import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -39,7 +43,7 @@ const FareOption = ({ label, sublabel, active = false }) => (
 const bookings = () => {
   return (
     <div className="flex justify-center flex-col">
-      <div className="bg-white w-[80%] flex justify-center self-center rounded-lg shadow-lg p-4 z-10">
+      <div className="bg-white  absolute top-20 flex justify-center self-center rounded-lg shadow-lg p-4 z-10">
         <ul className="flex justify-center items-center gap-6">
           <li className="flex flex-col items-center gap-2 text-center w-[90px]">
             <Plane />
@@ -81,7 +85,7 @@ const bookings = () => {
       </div>
 
       <div className="w-full flex justify-center">
-        <Card className="p-4 w-full  top-32 absolute max-w-6xl mx-auto pt-20  flex flex-col bg-white">
+        <Card className="p-4 w-full mt-10   mx-auto pt-16  flex flex-col bg-white">
           {/* Trip Type Selection */}
 
           <div className="mb-6">
@@ -161,12 +165,64 @@ const bookings = () => {
           </div>
 
           {/* Search Button */}
-          
         </Card>
-        <Button className="w-44 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-3xl bottom-64 absolute font-bold text-2xl">
-            SEARCH
-          </Button>
+        <Button className="w-44 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-3xl top-[60%] absolute font-bold text-2xl">
+          SEARCH
+        </Button>
       </div>
+
+
+      <div className="w-full bg-white mt-8 rounded-full shadow-lg border-gray-200">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-2 px-4">
+        <div className="flex items-center gap-2 px-3 cursor-pointer hover:bg-gray-50  py-1 border-r border-gray-300">
+          <span className="text-blue-600">
+            <Globe className="w-4 h-4" />
+          </span>
+          <div>
+            <div className="text-sm font-medium text-gray-700">Where2Go</div>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-2 px-3 cursor-pointer hover:bg-gray-50  py-1 border-r border-gray-300">
+          <span className="text-blue-600">
+            <Shield className="w-4 h-4" />
+          </span>
+          <div>
+            <div className="text-sm font-medium text-gray-700">Insurance</div>
+            <div className="text-xs text-gray-500">For International Trips</div>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-2 px-3 cursor-pointer hover:bg-gray-50  py-1 border-r border-gray-300">
+          <span className="text-blue-600">
+            <Plane className="w-4 h-4" />
+          </span>
+          <div>
+            <div className="text-sm font-medium text-gray-700">Explore International Flights</div>
+            <div className="text-xs text-gray-500">Cheapest Flights to Paris, Bali, Tokyo & more</div>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-2 px-3 cursor-pointer hover:bg-gray-50  py-1 border-r border-gray-300">
+          <span className="text-blue-600">
+            <Users className="w-4 h-4" />
+          </span>
+          <div>
+            <div className="text-sm font-medium text-gray-700">MICE</div>
+            <div className="text-xs text-gray-500">Offsites, Events & Meetings</div>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-2 px-3 cursor-pointer hover:bg-gray-50  py-1 border-r">
+          <span className="text-blue-600">
+            <Gift className="w-4 h-4" />
+          </span>
+          <div>
+            <div className="text-sm font-medium text-gray-700">Gift Cards</div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   );
 };

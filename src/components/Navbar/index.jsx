@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center py-4 px-4 md:px-8">
+    <div className="flex justify-between items-center py-4">
       <div>
         <img className="w-40" src={navLogo} alt="Make My Trip" />
       </div>
